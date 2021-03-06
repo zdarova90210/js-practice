@@ -47,18 +47,17 @@ getSums( arr ) = [ 1, 1+2, 1+2+3, 1+2+3+4, 1+2+3+4+5 ] = [ 1, 3, 6, 10, 15 ]
 Функция не должна модифицировать входной массив.
 В решении используйте метод arr.reduce.
 */
-// function getSums(arrayOfNums) {
-//   let result = [];
-//   if (!arrayOfNums.length) return result;
-//
-//   let totalSum = arrayOfNums.reduce((sum, item) => {
-//     result.push(sum);
-//     return sum + item;
-//   });
-//   result.push(totalSum);
-//
-//   return  result;
-// }
-//
-// const result = getSums([1, 2, 3, 4, 5]);
-// console.log(result); //[ 1, 3, 6, 10, 15 ] expected
+function getSums(arrayOfNums) {
+  let result = [];
+  if (!arrayOfNums.length) return result;
+
+  arrayOfNums.reduce((acc, item, i) => {
+    result.push(item + acc)
+    return item + acc
+  }, 0)
+
+  return result;
+}
+
+const result = getSums([-2,-1,0,1]);
+console.log(result); //[ 1, 3, 6, 10, 15 ] expected
