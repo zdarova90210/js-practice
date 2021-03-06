@@ -1,10 +1,8 @@
 // Get summ of array nums
-/*
-const nums = [1, 2, 3, 4, 5];
-const sum = nums.reduce((result, num) => result + num, 0);
-
-console.log(sum);
-*/
+// const nums = [1, 2, 3, 4, 5];
+// const sum = nums.reduce((result, num) => result + num, 0);
+//
+// console.log(sum);
 
 // Find the sum of the first N elements up to the first zero
 /*
@@ -36,3 +34,31 @@ nums.reduce((acc, item, i) => {
 console.log(answer);
 */
 
+
+/*
+Массив частичных сумм
+На входе массив чисел, например: arr = [1,2,3,4,5].
+Напишите функцию getSums(arr), которая возвращает массив его частичных сумм.
+Иначе говоря, вызов getSums(arr) должен возвращать новый массив из такого же числа элементов, в котором на каждой позиции должна быть сумма элементов arr до этой позиции включительно.
+То есть:
+для arr = [ 1, 2, 3, 4, 5 ]
+getSums( arr ) = [ 1, 1+2, 1+2+3, 1+2+3+4, 1+2+3+4+5 ] = [ 1, 3, 6, 10, 15 ]
+Ещё пример: getSums([-2,-1,0,1]) = [-2,-3,-3,-2].
+Функция не должна модифицировать входной массив.
+В решении используйте метод arr.reduce.
+*/
+// function getSums(arrayOfNums) {
+//   let result = [];
+//   if (!arrayOfNums.length) return result;
+//
+//   let totalSum = arrayOfNums.reduce((sum, item) => {
+//     result.push(sum);
+//     return sum + item;
+//   });
+//   result.push(totalSum);
+//
+//   return  result;
+// }
+//
+// const result = getSums([1, 2, 3, 4, 5]);
+// console.log(result); //[ 1, 3, 6, 10, 15 ] expected
