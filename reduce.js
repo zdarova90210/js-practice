@@ -59,5 +59,5 @@ function getSums(arrayOfNums) {
   return result;
 }
 
-const result = getSums([-2,-1,0,1]);
+const result = getSums([ 1, 2, 3, 4, 5 ]);
 console.log(result); //[ 1, 3, 6, 10, 15 ] expected
